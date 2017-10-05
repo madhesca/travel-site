@@ -1,1 +1,3 @@
-console.log('this is a test');
+import MobileMenu from './modules/MobileMenu';
+
+var mobileMenu = new MobileMenu();
