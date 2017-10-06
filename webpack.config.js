@@ -6,10 +6,13 @@ var path = require('path'); //part of node to make path an absolute path
 
 
 module.exports = {
-	entry: './app/assets/scripts/App.js',     //this is to tell webpack w/c file it should begin looking at to create its bundle (App.js)
+	entry: {
+		App: './app/assets/scripts/App.js',
+		Vendor: './app/assets/scripts/Vendor.js'
+	},     //this is to tell webpack w/c file it should begin looking at to create its bundle (App.js)
 	output: {									//where the final product should be bundled to
 	  path: path.resolve(__dirname, './app/temp/scripts'), //must be absolute path
-	  filename: 'App-bundled.js'
+	  filename: '[name].js'
 	},
 	module: {
 		loaders: [
